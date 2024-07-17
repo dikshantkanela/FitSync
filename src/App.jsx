@@ -6,11 +6,13 @@ import TodoList from "./components/TodoList/TodoList";
 
 function App() {
   return (
-    <>
+  <div className="bg-[#021020]">
       <div className="">
         <Navbar />
       </div>
-
+    <div className="">
+      <Hero/>
+    </div>
       <div className="">
         {/* <Exercise /> */}
       </div>
@@ -18,7 +20,8 @@ function App() {
       <div className="">
         {/* <TodoList/> */}
       </div>
-    </>
+      </div>
+    
   );
 }
 

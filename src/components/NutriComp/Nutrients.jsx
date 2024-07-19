@@ -18,7 +18,7 @@ const NaturalNutrients = () => {
     <div>
       <h2>Natural Language for Nutrients</h2>
       <input
-        type="text"
+        type="search"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Enter food description"
@@ -40,7 +40,7 @@ const NaturalNutrients = () => {
                 <div className="">Fiber : <span>{food.nf_dietary_fiber}</span></div>
                 <div className="">Sugar : <span>{food.nf_sugars}</span></div>
                 <div className="">Protien : <span>{food.nf_protein}</span></div>
-            </div> : " "}</div>
+            </div> : " NO RESULTS FOUND "}</div>
         )) : ""}
       </div>
     </div>

@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import NaturalExercise from "./components/NutriComp/ExToCal";
 import NaturalNutrients from "./components/NutriComp/Nutrients";
 import TodoList from "./components/TodoList/TodoList";
+import TrackCalories from "./components/TrackCalories";
 
 function App() {
   return (
@@ -23,9 +24,14 @@ function App() {
         {/* <TodoList/> */}
       </div>
       <div className=''>
-      <NaturalExercise/>
-      <NaturalNutrients/>
+      {/* <NaturalExercise/> */}
+      {/* <NaturalNutrients/> */}
     </div>
+    
+    <div>
+      <TrackCalories/>
+    </div>
+
       </div>
     
   );

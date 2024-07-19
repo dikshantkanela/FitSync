@@ -4,6 +4,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { MdCall } from "react-icons/md";
 import { IoIosStar } from "react-icons/io";
 import heroImg from '../assets/hero.jpeg'
+
 import { motion } from 'framer-motion'
 const Hero = () => {
   const [text] = useTypewriter({
@@ -12,9 +13,11 @@ const Hero = () => {
   });
 
   return (
-    <div className='font-sans flex flex-row my-[80px] h-[100vh] mx-[42px]'>
-      <div className='left flex flex-col mr-5 '>
     
+    <div className='font-sans flex flex-row  my-[80px] h-[80vh] mx-[42px]'>
+    
+      <div className=' left flex flex-col mr-5 '>
+
 <h1 className='text-6xl font-bold leading-[70px] '>
 <span className='text-6xl font-bold text-white'>{text}</span>
 <Cursor />

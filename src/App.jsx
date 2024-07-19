@@ -2,6 +2,8 @@ import "./App.css";
 import Exercise from "./components/Exercise";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import NaturalExercise from "./components/NutriComp/ExToCal";
+import NaturalNutrients from "./components/NutriComp/Nutrients";
 import TodoList from "./components/TodoList/TodoList";
 
 function App() {
@@ -20,6 +22,10 @@ function App() {
       <div className="">
         {/* <TodoList/> */}
       </div>
+      <div className=''>
+      <NaturalExercise/>
+      <NaturalNutrients/>
+    </div>
       </div>
     
   );

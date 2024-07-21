@@ -106,6 +106,7 @@ const NaturalExercise = () => {
           ))
         ) : ""}
       </motion.div>
+      test
     </div>
   );
 };

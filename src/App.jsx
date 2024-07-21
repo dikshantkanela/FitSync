@@ -1,4 +1,5 @@
 import "./App.css";
+import BMIcalc from "./components/BMIcalc";
 import Exercise from "./components/Exercise";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -14,7 +15,7 @@ function App() {
         <Navbar />
       </div>
     <div className="">
-      <Hero/>
+      {/* <Hero/> */}
     </div>
       <div className="">
         {/* <Exercise /> */}
@@ -29,7 +30,8 @@ function App() {
     </div>
     
     <div>
-      <TrackCalories/>
+      {/* <TrackCalories/> */}
+      <BMIcalc/>
     </div>
 
       </div>

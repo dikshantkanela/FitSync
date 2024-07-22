@@ -98,7 +98,7 @@ const NaturalExercise = () => {
                   className="ml-2 inline-block"
                 >
                   🎉
-                </motion.span> test
+                </motion.span> 
               </p>
             </div>
           ))

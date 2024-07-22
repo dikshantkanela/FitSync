@@ -32,15 +32,15 @@ const NaturalNutrients = () => {
             <div className="">
                 <div className="">Food Name : <span>{food.food_name}</span></div>
                 <div className="">Calories : <span>{food.nf_calories}</span></div>
-                <div className="">Total fat : <span>{food.nf_total_fat}</span></div>
-                <div className="">Saturated fat : <span>{food.nf_saturated_fat}</span></div>
+                <div className="">Total Fat : <span>{food.nf_total_fat}</span></div>
+                <div className="">Saturated Fat : <span>{food.nf_saturated_fat}</span></div>
                 <div className="">Cholesterol : <span>{food.nf_cholesterol}</span></div>
                 <div className="">Sodium : <span>{food.nf_sodium}</span></div>
                 <div className="">Carbs : <span>{food.nf_total_carbohydrate}</span></div>
                 <div className="">Fiber : <span>{food.nf_dietary_fiber}</span></div>
                 <div className="">Sugar : <span>{food.nf_sugars}</span></div>
                 <div className="">Protien : <span>{food.nf_protein}</span></div>
-            </div> : " NO RESULTS FOUND "}</div>
+            </div> : "NO RESULTS FOUND! "}</div>
         )) : ""}
       </div>
 

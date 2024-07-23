@@ -27,6 +27,7 @@
             pointerEvents="none"
             children={<Icon as={FaSearch} color="white" className="mt-[-8px] ml-3" w={6} h={18} />}
           />
+          
           <Input
             type="text"
             size="md"

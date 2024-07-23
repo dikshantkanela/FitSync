@@ -87,9 +87,7 @@ const NaturalExercise = () => {
       >
         {results ? (
           results.exercises.map((exer, index) => (
-            <motion.div key={index} className="mb-4"     initial={{ scale: 0.5, opacity: 0, y: 100 }} // Start off-screen
-            animate={{ scale: 1, opacity: 1, y: 0 }} // End at final position
-            transition={{ ease: "easeInOut", duration: 1 }}>
+            <div key={index} className="mb-4">
               <p className="text-4xl">
                 You Burnt {exer.nf_calories} Kcal by{" "}
                 <span className="capitalize">{exer.name}</span>{" "}
@@ -102,11 +100,11 @@ const NaturalExercise = () => {
                   🎉
                 </motion.span>
               </p>
-            </motion.div>
+            </div>
           ))
         ) : ""}
       </motion.div>
-      test
+      
     </div>
   );
 };

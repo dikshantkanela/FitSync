@@ -43,6 +43,7 @@ const NaturalNutrients = () => {
             </div> : " NO RESULTS FOUND "}</div>
         )) : ""}
       </div>
+
     </div>
   );
 };

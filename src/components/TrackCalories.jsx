@@ -8,7 +8,7 @@ const TrackCalories = () => {
    <div className='left'>
 <img src={calories} className='rounded-md w-[600px] h-[400px]' alt="calorieImage" />
    </div>
-   <div className='right flex flex-col '>
+   <div className='right flex flex-col  '>
     <h2 className='text-white font-bold text-5xl'>Track Calories by Activity </h2>
   <p className= 'text-gray-300 text-xl ml-2 h-[180px] w-[600px] mb-[-50px] mt-6'>Effortlessly track and analyze your calorie expenditure for every activity with precision and ease, ensuring you stay informed and motivated on your fitness journey. Monitor detailed insights and progress to achieve your health and wellness goals more effectively.</p>
     <div>

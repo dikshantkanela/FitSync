@@ -3,7 +3,7 @@ import exercise from '../assets/exercise.jpg'
 const TrackExercise = () => {
   return (
 
-    <div className='font-sans mt-[50px] '>
+    <div id='exercises' className='font-sans mt-[50px] '>
     <div className='flex flex-row justify-around'>
         <div className='left flex flex-col'>
     <h2 className='text-white text font-bold mb-[50px] text-5xl'>Explore Exercises</h2>

@@ -38,8 +38,8 @@ const Exercise = () => {
   };
 
   return (
-    <div>
-      <h1 className="font-bold text-center text-2xl text-gray-200">Fitness Exercises</h1>
+    <div className="font-sans bg-[#021020]">
+      <h1 className="font-bold text-center text-6xl my-10 text-white">Fitness Exercises</h1>
       <div className="flex flex-wrap gap-4 p-4 justify-center">
         {Muscle.map((muscle, index) => (
           <div
@@ -52,15 +52,9 @@ const Exercise = () => {
         ))}
       </div>
 
-      {/* <select className="text-center" value={bodypart} onChange={handleBodyPartChange}> */}
-      {/* </select> */}
-      {/* <ul>
-        {exercises.map((exercise, index) => (
-          <li key={index}>{exercise.name}</li>
-        ))}
-      </ul> */}
+    
       <div className="">
-        <div className="font-bold text-center text-2xl text-gray-200">Exercise List</div>
+        <div className="font-bold text-center text-5xl mt-[80px] text-white">Exercise List</div>
         <ExCard exercises={exercises} />
       </div>
     </div>

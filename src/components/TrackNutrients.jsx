@@ -2,7 +2,7 @@ import React from 'react'
 import Nutri from '../assets/nutri.jpeg'
 const TrackNutrients = () => {
   return (
-    <div className='flex flex-row justify-around font-sans gap-8 h-[80vh] mt-[50px] p-3'>
+    <div id='food' className='flex flex-row justify-around font-sans gap-8 h-[80vh] mt-[50px] p-3'>
    <div className='left'>
 <img src={Nutri} className='rounded-md w-[600px] h-[400px]' alt="calorieImage" />
    </div>

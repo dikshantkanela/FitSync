@@ -5,10 +5,10 @@ import {
     FiShare,
     FiPlusSquare,
   } from "react-icons/fi";
-  import { FaHeartbeat, FaBullseye, FaDumbbell, FaAppleAlt, FaClipboard  } from 'react-icons/fa';
+  import { FaHeartbeat, FaBullseye,FaFire, FaDumbbell, FaAppleAlt, FaClipboard  } from 'react-icons/fa';
   import { motion } from "framer-motion";
   import { Dispatch, SetStateAction, useState } from "react";
- 
+ import { Link } from "react-scroll";
   
   const Dropdown = () => {
     const [open, setOpen] = useState(false);
@@ -32,11 +32,11 @@ import {
             style={{ originY: "top", translateX: "-50%" }}
             className="flex flex-col gap-2 p-2 rounded-lg bg-[#021020] shadow-xl absolute top-[120%] left-[50%] w-48 overflow-hidden"
           >
-            <Option setOpen={setOpen} Icon={FaHeartbeat} text="Fitness Advisor" />
-            <Option setOpen={setOpen} Icon={FaBullseye} text="Set Daily Goals" />
-            <Option setOpen={setOpen} Icon={FaDumbbell} text="All Exercises" />
-            <Option setOpen={setOpen} Icon={FaAppleAlt} text="Food Nutritional Info" />
-            <Option setOpen={setOpen} Icon={FaClipboard} text="Fitness Report" />
+          <Link to="trackcalories" spy={true} smooth={true} offset={-100} duration={500}><Option setOpen={setOpen} Icon={FaFire} text="Calories by Acitivity" /></Link>  
+       <Link to="exercises"   spy={true} smooth={true} offset={-150} duration={500}> <Option setOpen={setOpen} Icon={FaDumbbell} text="All Exercises" /></Link>    
+        <Link to="food"  spy={true} smooth={true} offset={-120} duration={500}><Option setOpen={setOpen} Icon={FaAppleAlt} text="Food Nutritional Info" /></Link>    
+          <Link to="advisor" spy={true} smooth={true} offset={-150} duration={500}>  <Option setOpen={setOpen} Icon={FaHeartbeat} text="Fitness Advisor" /></Link>
+          <Link to="goals" spy={true} smooth={true} offset={-150} duration={500}><Option setOpen={setOpen} Icon={FaBullseye} text="Fitness Task Scheduler" /></Link>  
           </motion.ul>
         </motion.div>
       </div>

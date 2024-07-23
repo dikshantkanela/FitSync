@@ -10,7 +10,7 @@ import TodoList from "./components/TodoList/TodoList";
 import TrackCalories from "./components/TrackCalories";
 import TrackExercise from "./components/TrackExercise";
 import TrackNutrients from "./components/TrackNutrients";
-
+import ActivityScheduler from "./components/ActivityScheduler"
 
 function App() {
   return (
@@ -24,30 +24,32 @@ function App() {
     <div>
       <TrackCalories/>
       {/* <BMIcalc/> */}
+      {/* route this */}
     </div>
       <div className="">
         <TrackExercise/>
-        {/* <Exercise /> */}
+        {/* <Exercise />   */}
+        {/* route this */}
       </div>
 
       <div>
         <TrackNutrients/>
-        
+        {/* <NaturalNutrients/> */}
+        {/* route this */}
      </div>
 
 <div>
   <FitnessAdvisor/>
-  <BMIcalc/>
+  {/* <BMIcalc/> */}
+  {/* route this */}
 </div>
 
       <div className="">
+        <ActivityScheduler/>
         {/* <TodoList/> */}
+        {/* Route this */}
       </div>
-      <div className=''>
-      {/* <NaturalExercise/> */}
-  
-    </div>
-    
+   
     
       </div>
     

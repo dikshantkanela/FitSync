@@ -39,15 +39,15 @@ const TodoList = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Todo List</h1>
+    <div className="max-w-md mx-auto  font-sans p-4">
+      <h1 className=" w-[800px]  mr-[200px] text-5xl text-white font-bold mb-10">Fitness Task Scheduler</h1>
       <div className="flex mb-4">
         <input 
           type="text" 
-          className="flex-grow p-2 border rounded" 
+          className="flex-grow ml-10 p-2 border rounded" 
           value={input} 
           onChange={(e) => setInput(e.target.value)} 
-          placeholder="Add a new task..."
+          placeholder="Add a new fitness task..."
         />
         <button 
           className="ml-2 p-2 bg-blue-500 text-white rounded" 
@@ -56,7 +56,7 @@ const TodoList = () => {
           {editIndex !== null ? 'Update' : 'Add'}
         </button>
       </div>
-      <ul>
+      <ul className='ml-10'>
         {todos.map((todo, index) => (
           <TodoItem 
             key={index} 

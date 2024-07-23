@@ -4,7 +4,7 @@ import NaturalExercise from './NutriComp/ExToCal'
 const TrackCalories = () => {
   return (
     <>
-    <div className='flex flex-row justify-around font-sans h-[80vh] p-3'>
+    <div id="trackcalories" className='flex flex-row justify-around font-sans h-[80vh] p-3'>
    <div className='left'>
 <img src={calories} className='rounded-md w-[600px] h-[400px]' alt="calorieImage" />
    </div>

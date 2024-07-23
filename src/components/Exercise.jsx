@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Muscle from "./Muscle";
 import ExCard from "./ExCard";
-
+import ExIconCard from "./ExIconCard";
 
 const Exercise = () => {
   const [exercises, setExercises] = useState([]);
@@ -33,26 +33,34 @@ const Exercise = () => {
     fetchExercises(bodypart);
   }, [bodypart]);
 
-  const handleBodyPartChange = (event) => {
-    setBodypart(event.target.value);
+  const handleBodyPartChange = (value) => {
+    setBodypart(value);
   };
 
   return (
     <div>
-      <h1 className="font-bold text-center text-2xl">Fitness Exercises</h1>
-      <select className="text-center" value={bodypart} onChange={handleBodyPartChange}>
+      <h1 className="font-bold text-center text-2xl text-gray-200">Fitness Exercises</h1>
+      <div className="flex flex-wrap gap-4 p-4 justify-center">
         {Muscle.map((muscle, index) => (
-          <option key={index} value={muscle}>
-            {muscle.replace('_', ' ')}
-          </option>
+          <div
+            key={index}
+            className="cursor-pointer"
+            onClick={() => handleBodyPartChange(muscle)}
+          >
+            <ExIconCard text={muscle} />
+          </div>
         ))}
-      </select>
+      </div>
+
+      {/* <select className="text-center" value={bodypart} onChange={handleBodyPartChange}> */}
+      {/* </select> */}
       {/* <ul>
         {exercises.map((exercise, index) => (
           <li key={index}>{exercise.name}</li>
         ))}
       </ul> */}
       <div className="">
+        <div className="font-bold text-center text-2xl text-gray-200">Exercise List</div>
         <ExCard exercises={exercises} />
       </div>
     </div>
@@ -60,4 +68,3 @@ const Exercise = () => {
 };
 
 export default Exercise;
-

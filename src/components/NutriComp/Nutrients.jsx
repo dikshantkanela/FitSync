@@ -17,8 +17,8 @@ const NaturalNutrients = () => {
   
 
   return (
-    <div className="font-sans flex flex-col items-center justify-center ">
-      <h2 className="text-white   text-center text-6xl font-bold" >Get Nutritional Information</h2>
+    <div className="font-sans flex flex-col items-center p-5 h-screen  bg-[#021020] justify-center ">
+      <h2 className="text-white my-5  text-center text-6xl font-bold" >Get Nutritional Information</h2>
 
       <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
     <div className="relative my-10">
@@ -36,7 +36,7 @@ const NaturalNutrients = () => {
     </div>
 
       {/* {results && <pre>{JSON.stringify(results, null, 2)}</pre>} */}
-      <div className="text-white  font-semibold text-2xl ">
+      <div className="text-white flex-grow overflow-y-auto font-semibold text-2xl ">
         {results? results.foods.map((food, index) => (
           <div key={index}>
             {query === food.food_name ?

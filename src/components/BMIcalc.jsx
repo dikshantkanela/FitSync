@@ -10,6 +10,7 @@ const BMIcalc = () => {
   const [result, setResult] = useState(null); // for BMR
   const [bmi, setBmi] = useState(null);
   const [category, setCategory] = useState("");
+  const [advice,setAdvice] = useState("");
 
   const bmiCalculator = () => {
     const hInMeter = height / 100;
@@ -20,12 +21,16 @@ const BMIcalc = () => {
 
   const getBMICategory = (bmi) => {
     if (bmi < 18.5) {
+      setAdvice("You should consume more calories than your maintenance calories to gain weight!")
       return "Underweight!";
     } else if (bmi >= 18.5 && bmi <= 24.9) {
+      setAdvice("You should consume exactly your maintenance calories to keep your bmi constant!")
       return "Normal Weight!";
     } else if (bmi >= 25 && bmi <= 29.9) {
+      setAdvice("You should consume less calories than your maintenance calories to lose weight!")
       return "Overweight!";
     } else {
+      setAdvice("You should consume less calories than your maintenance calories to lose weight!")
       return "Obese!";
     }
   };
@@ -200,7 +205,7 @@ const BMIcalc = () => {
             </button>
           </div>
         </form>
-        <div className=" w-1/2 h-full flex-col text-center py-40">
+        <div className=" mb-10 w-1/2 rounded-lg p-3 flex-col bg-black  text-center  py-40">
           {" "}
           {result ? <p className="text-2xl font-semibold">{result} </p> : <p className="text-2xl font-semibold">Fill the form to calculate your BMI and BMR</p>}
           {bmi ? (
@@ -208,6 +213,7 @@ const BMIcalc = () => {
               Your Body Mass Index is {bmi} and you are {category}{" "}
             </p>
           ) : ""}
+          <p className="font-semibold text-2xl">{advice}</p>
         </div>
       </div>
     </div>

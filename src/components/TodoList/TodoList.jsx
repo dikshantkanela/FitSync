@@ -41,7 +41,7 @@ const TodoList = () => {
   return (
     <div className=" w-full font-sans p-4 bg-[#021020] h-screen">
       <div className="w-1/2 mx-auto">
-        <h1 className=" text-center   text-5xl text-white font-bold mb-10">
+        <h1 className=" text-center mt-6  text-5xl text-white font-bold mb-10">
           Fitness Task Scheduler
         </h1>
         <div className="flex mb-4">

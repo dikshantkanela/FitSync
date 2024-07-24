@@ -11,8 +11,8 @@ const Exercise = () => {
   };
 
   return (
-    <div className="font-sans bg-[#021020]">
-      <h1 className="font-bold text-center text-6xl  text-white">Fitness Exercises</h1>
+    <div className="font-sans p-5 bg-[#021020]">
+      <h1 className="font-bold text-center text-6xl my-8 text-white">Fitness Exercisess</h1>
       <div className="flex flex-wrap gap-9 p-4 justify-center">
         {Muscle.map((muscle, index) => (
           <div

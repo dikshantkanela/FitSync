@@ -32,10 +32,13 @@ const ExerciseDetail = () => {
   }, [bodypart]);
 
   return (
-    <div className="font-sans bg-[#021020] ">
-        <div className="">
-      <h1 className="font-bold text-center text-6xl text-white">{bodypart} Exercises</h1>
-      <ExCard exercises={exercises} /></div>
+    <div className="font-sans bg-[#021020] h-screen flex flex-col">
+      <h1 className="font-bold text-center text-6xl my-5 text-white">
+        {bodypart.toUpperCase()} EXERCISES
+      </h1>
+      <div className="flex-grow overflow-y-auto p-5">
+        <ExCard exercises={exercises} />
+      </div>
     </div>
   );
 };

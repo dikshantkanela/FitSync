@@ -16,8 +16,8 @@
       <div>
           <ul className='flex flex-row gap-6'>
               <li  className='hover:text-gray-400 text-gray-400'><a href="">Home</a> </li>
-              <li className='hover:text-gray-400'><a href="">About Us</a> </li>
-              <li className='hover:text-gray-400'><a href="">Contact Us</a> </li>
+              <li className='hover:text-gray-400'>About Us </li>
+              <li className='hover:text-gray-400'>Contact Us </li>
               <Dropdown/>
           </ul>
       </div>

@@ -41,6 +41,7 @@ const NaturalNutrients = () => {
           <div key={index}>
             {query === food.food_name ?
             <div className="text-justify bg-[#031932] rounded-md p-7 w-[600px] ">
+               <div className=""><span><img src={food.photo.thumb} alt="..." /></span></div>
                 <div className="my-3">Food Name :  <span>{food.food_name}</span></div>
                 <div className="my-3">Calories : <span>{food.nf_calories}</span></div>
                 <div className="my-3">Total Fat : <span>{food.nf_total_fat}</span></div>

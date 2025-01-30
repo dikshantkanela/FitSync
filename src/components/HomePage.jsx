@@ -9,7 +9,7 @@ import TrackNutrients from "./TrackNutrients";
 
 function Home() {
   return (
-    <div className="bg-[#021020]">
+    <div className="bg-[#021020] h-screen w-screen">
       <div className="">
         <Navbar />
       </div>

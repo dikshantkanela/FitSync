@@ -52,7 +52,7 @@ const Hero = () => {
         <img
           src={heroImg}
           alt="Hero"
-          className="w-full h-auto max-h-[400px] lg:max-h-[500px] object-cover rounded-md shadow-2xl"
+          className="w-full h-auto max-h-[400px] lg:max-h-[400px] object-cover rounded-md shadow-2xl"
           style={{
             objectPosition: "center",
             objectFit: "cover",

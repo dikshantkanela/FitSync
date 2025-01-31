@@ -4,14 +4,23 @@ import { Link } from "react-router-dom";
 
 const TrackExercise = () => {
   return (
-    <div id="exercises" className="font-sans flex flex-col sm:flex-row justify-between items-center sm:justify-around p-3">
+    <div
+      id="exercises"
+      className="font-sans flex flex-col-reverse sm:flex-row justify-between items-center sm:justify-around p-3"
+    >
       {/* Left Section (Text) */}
       <div className="w-full sm:w-[45%] text-center sm:text-left">
         <h2 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl leading-[50px] sm:leading-[60px] lg:leading-[70px] mb-6 sm:mb-10">
           Explore Exercises
         </h2>
         <p className="text-base sm:text-lg text-gray-300 mt-6 sm:mt-8 text-justify">
-          Dive into a comprehensive library of exercises tailored to target every muscle group, whether you're focusing on abdominals, biceps, calves, chest, forearms, glutes, or any other part of your body. Our extensive database offers a variety of workouts to suit your fitness goals, from beginner routines to advanced techniques. Each exercise is detailed with step-by-step instructions, ensuring you perform them correctly and effectively.
+          Dive into a comprehensive library of exercises tailored to target
+          every muscle group, whether you're focusing on abdominals, biceps,
+          calves, chest, forearms, glutes, or any other part of your body. Our
+          extensive database offers a variety of workouts to suit your fitness
+          goals, from beginner routines to advanced techniques. Each exercise is
+          detailed with step-by-step instructions, ensuring you perform them
+          correctly and effectively.
         </p>
         <Link
           to="/exercise"

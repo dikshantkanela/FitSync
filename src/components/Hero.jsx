@@ -44,22 +44,23 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className=""
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <img
-          src={heroImg}
-          alt="Hero"
-          className="w-full h-auto max-h-[400px] lg:max-h-[400px] object-cover rounded-md shadow-2xl"
-          style={{
-            objectPosition: "center",
-            objectFit: "cover",
-            margin: "0 7px",
-          }} // Reducing 7px on all sides
-        />
-      </motion.div>
+  className=""
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 1 }}
+>
+  <img
+    src={heroImg}
+    alt="Hero"
+    className="hidden lg:block w-full h-auto max-h-[400px] lg:max-h-[400px] object-cover rounded-md shadow-2xl"
+    style={{
+      objectPosition: "center",
+      objectFit: "cover",
+      margin: "0 7px",
+    }}
+  />
+</motion.div>
+
     </div>
   );
 };

@@ -39,27 +39,27 @@ const TodoList = () => {
   };
 
   return (
-    <div className=" w-full font-sans p-4 bg-[#021020] h-screen">
-      <div className="w-1/2 mx-auto">
-        <h1 className=" text-center mt-6  text-5xl text-white font-bold mb-10">
+    <div className="w-full font-sans p-6 bg-[#021020] min-h-screen flex flex-col items-center">
+      <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto bg-[#1E293B] rounded-lg shadow-lg p-6">
+        <h1 className="text-center text-3xl sm:text-4xl text-white font-bold mb-6">
           Fitness Task Scheduler
         </h1>
-        <div className="flex mb-4">
+        <div className="flex flex-col sm:flex-row items-center mb-6">
           <input
             type="text"
-            className="flex-grow ml-10 p-2 border rounded"
+            className="w-full sm:w-auto flex-grow p-3 mb-4 sm:mb-0 sm:ml-4 border border-gray-600 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Add a new fitness task..."
           />
           <button
-            className="ml-2 p-2 bg-green-500 text-gray-900 font-semibold rounded"
+            className="w-full sm:w-auto sm:ml-4 p-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition duration-200"
             onClick={addTodo}
           >
-            {editIndex !== null ? "Update" : "Add"}
+            {editIndex !== null ? "Update Task" : "Add Task"}
           </button>
         </div>
-        <ul className="ml-10">
+        <ul>
           {todos.map((todo, index) => (
             <TodoItem
               key={index}

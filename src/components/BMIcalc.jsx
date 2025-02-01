@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Box } from "@chakra-ui/react";
 
 const BMIcalc = () => {
   const [height, setHeight] = useState("");
@@ -10,7 +9,7 @@ const BMIcalc = () => {
   const [result, setResult] = useState(null); // for BMR
   const [bmi, setBmi] = useState(null);
   const [category, setCategory] = useState("");
-  const [advice,setAdvice] = useState("");
+  const [advice, setAdvice] = useState("");
 
   const bmiCalculator = () => {
     const hInMeter = height / 100;
@@ -21,16 +20,24 @@ const BMIcalc = () => {
 
   const getBMICategory = (bmi) => {
     if (bmi < 18.5) {
-      setAdvice("You should consume more calories than your maintenance calories to gain weight!")
+      setAdvice(
+        "You should consume more calories than your maintenance calories to gain weight!"
+      );
       return "Underweight!";
     } else if (bmi >= 18.5 && bmi <= 24.9) {
-      setAdvice("You should consume exactly your maintenance calories to keep your bmi constant!")
+      setAdvice(
+        "You should consume exactly your maintenance calories to keep your BMI constant!"
+      );
       return "Normal Weight!";
     } else if (bmi >= 25 && bmi <= 29.9) {
-      setAdvice("You should consume less calories than your maintenance calories to lose weight!")
+      setAdvice(
+        "You should consume fewer calories than your maintenance calories to lose weight!"
+      );
       return "Overweight!";
     } else {
-      setAdvice("You should consume less calories than your maintenance calories to lose weight!")
+      setAdvice(
+        "You should consume fewer calories than your maintenance calories to lose weight!"
+      );
       return "Obese!";
     }
   };
@@ -76,23 +83,25 @@ const BMIcalc = () => {
       )} kcal.`
     );
   };
+
   return (
-    <div className="font-sans  h-screen bg-[#031932] flex justify-center items-center flex-col text-gray-300">
-      <h1 className="text-5xl font-bold text-white m-3 ">
+    <div className="font-sans bg-[#031932] min-h-screen flex flex-col items-center p-4 sm:p-6 text-gray-300">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 text-center">
         Fitness Report - BMR and BMI
       </h1>
-      <div className="flex  w-full justify-center items-center px-20 gap-10">
+
+      <div className="flex flex-col sm:flex-row w-full max-w-5xl gap-8 items-center">
         <form
-          className=" w-1/2 px-10 py-5"
+          className="w-full sm:w-1/2 bg-[#021020] rounded-lg p-6"
           onSubmit={(e) => {
             e.preventDefault();
             calculateCalories();
             bmiCalculator();
           }}
         >
-          <div>
-            <label htmlFor="weight" className="block mb-2 text-xl font-medium">
-              Weight (kg) :
+          <div className="mb-4">
+            <label htmlFor="weight" className="block text-lg font-medium mb-2">
+              Weight (kg):
             </label>
             <input
               type="number"
@@ -100,120 +109,98 @@ const BMIcalc = () => {
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
               required
-              className="bg-gray-50 border my-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-full p-2 rounded bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
               placeholder="Enter Your Weight in kg"
             />
           </div>
-          <div>
-            <label htmlFor="height" className="block mb-2 text-xl font-medium">
-              Height (cm) :
+          <div className="mb-4">
+            <label htmlFor="height" className="block text-lg font-medium mb-2">
+              Height (cm):
             </label>
-
             <input
               type="number"
               id="height"
               value={height}
               onChange={(e) => setHeight(e.target.value)}
               required
-              className="bg-gray-50 my-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-full p-2 rounded bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
               placeholder="Enter Your Height in cm"
             />
           </div>
-          <div>
-            <label htmlFor="height" className="block mb-2 text-xl font-medium">
-              Age :
+          <div className="mb-4">
+            <label htmlFor="age" className="block text-lg font-medium mb-2">
+              Age:
             </label>
-
             <input
               type="number"
               id="age"
               value={age}
               onChange={(e) => setAge(e.target.value)}
               required
-              className="bg-gray- my-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="w-full p-2 rounded bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
               placeholder="Enter Your Age"
             />
           </div>
-          <div>
-            <label
-              htmlFor="gender"
-              className="text-xl  block mb-2 font-medium  "
-            >
-              Gender :{" "}
+          <div className="mb-4">
+            <label htmlFor="gender" className="block text-lg font-medium mb-2">
+              Gender:
             </label>
             <select
-              className="bg-gray-50 border my-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="gender"
               value={gender}
               onChange={(e) => setGender(e.target.value)}
+              className="w-full p-2 rounded bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
             >
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
           </div>
-          <div>
+          <div className="mb-4">
             <label
               htmlFor="activity"
-              className="text-xl block mb-2 font-medium"
+              className="block text-lg font-medium mb-2"
             >
-              Activity Level :{" "}
+              Activity Level:
             </label>
             <select
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="activity"
               value={activity}
               onChange={(e) => setActivity(e.target.value)}
+              className="w-full p-2 rounded bg-gray-700 text-white focus:ring-2 focus:ring-blue-500"
             >
               <option value="sedentary">
                 Sedentary (little or no exercise)
               </option>
-              <option value="light">
-                Lightly active (light exercise/sports 1-3 days/week)
-              </option>
+              <option value="light">Lightly active (1-3 days/week)</option>
               <option value="moderate">
-                Moderately active (moderate exercise/sports 3-5 days/week)
+                Moderately active (3-5 days/week)
               </option>
-              <option value="active">
-                Very active (hard exercise/sports 6-7 days/week)
-              </option>
-              <option value="extra">
-                Extra active (very hard exercise/physical job)
-              </option>
+              <option value="active">Very active (6-7 days/week)</option>
+              <option value="extra">Extra active (physical job)</option>
             </select>
           </div>
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="flex items-center my-6  gap-2 px-3 w-[120px] py-2 rounded-md text-indigo-50 bg-[#114880] hover:bg-[#20346d] transition-colors"
-            >
-              <span className="font-medium text-md">Report</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg" //ARROW IMAGE
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-arrow-right"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-          </div>
+          <button
+            type="submit"
+            className="w-full bg-[#114880] hover:bg-[#20346d] text-white py-2 rounded mt-4"
+          >
+            Calculate
+          </button>
         </form>
-        <div className=" mb-10 w-1/2 rounded-lg p-3 flex-col bg-black  text-center  py-40">
-          {" "}
-          {result ? <p className="text-2xl font-semibold">{result} </p> : <p className="text-2xl font-semibold">Fill the form to calculate your BMI and BMR</p>}
-          {bmi ? (
-            <p className="text-2xl font-semibold my-3">
-              Your Body Mass Index is {bmi} and you are {category}{" "}
+
+        <div className="w-full sm:w-1/2 bg-black text-center p-6 rounded-lg">
+          {result ? (
+            <>
+              <p className="text-lg sm:text-xl font-semibold">{result}</p>
+              <p className="text-lg sm:text-xl font-semibold my-3">
+                Your Body Mass Index is {bmi} and you are {category}
+              </p>
+              <p className="text-lg sm:text-xl font-semibold">{advice}</p>
+            </>
+          ) : (
+            <p className="text-lg sm:text-xl font-semibold">
+              Fill the form to calculate your BMI and BMR
             </p>
-          ) : ""}
-          <p className="font-semibold text-2xl">{advice}</p>
+          )}
         </div>
       </div>
     </div>

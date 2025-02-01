@@ -8,7 +8,6 @@ const TrackNutrients = () => {
       id="food"
       className="font-sans flex flex-col sm:flex-row justify-between sm:justify-around items-center sm:items-start gap-8 p-3 mt-10 sm:mt-12"
     >
-      {/* Left Section (Image) */}
       <div className="w-full sm:w-[45%] mt-6 sm:mt-0">
         <img
           src={Nutri}
@@ -17,7 +16,6 @@ const TrackNutrients = () => {
         />
       </div>
 
-      {/* Right Section (Text) */}
       <div className="w-full sm:w-[45%] text-center sm:text-left mt-6 sm:mt-0">
         <h2 className="text-white font-bold text-4xl sm:text-5xl lg:text-6xl leading-[50px] sm:leading-[60px] lg:leading-[70px] mb-6 sm:mb-10">
           Get Nutritional Information

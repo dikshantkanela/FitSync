@@ -23,14 +23,21 @@ const TrackNutrients = () => {
           Get Nutritional Information
         </h2>
         <p className="text-base sm:text-lg text-gray-300 mt-6 sm:mt-8 text-justify mx-4 sm:mx-0">
-          Our Nutritional Information tool provides detailed insights into the food you enter, giving you precise data to support your dietary goals. For each item, you’ll receive a complete breakdown, including calories, total fat, saturated fat, cholesterol, sodium, carbohydrates, fiber, sugar, and protein. This comprehensive information helps you stay aware of health factors and track your calorie, protein, and other nutritional goals, making it easier to make informed and balanced dietary choices.
+          Our Nutritional Information tool provides detailed insights into the
+          food you enter, giving you precise data to support your dietary goals.
+          For each item, you’ll receive a complete breakdown, including
+          calories, total fat, saturated fat, cholesterol, sodium,
+          carbohydrates, fiber, sugar, and protein. This comprehensive
+          information helps you stay aware of health factors and track your
+          calorie, protein, and other nutritional goals, making it easier to
+          make informed and balanced dietary choices.
         </p>
 
         <Link
           to="/nutrients"
-          className="flex items-center justify-center sm:justify-start my-6 sm:my-8 gap-2 px-4 py-2 rounded-md text-indigo-50 bg-[#114880] hover:bg-[#20346d] transition-colors w-[160px] sm:w-[180px]"
+          className="flex items-center justify-between sm:justify-start my-6 sm:my-8 gap-3 px-6 py-3 rounded-lg text-white bg-[#114880] hover:bg-[#20346d] transition-all duration-300 w-[140px] sm:w-[160px] shadow-lg transform hover:scale-105"
         >
-          <span className="font-medium text-lg">Explore</span>
+          <span className="font-semibold text-lg">Explore</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
